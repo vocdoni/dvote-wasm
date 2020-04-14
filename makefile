@@ -53,6 +53,7 @@ pkg-web/dvote_wasm_bg.wasm: $(SOURCES) Cargo.toml
 .PHONY: clean
 clean:
 	cargo clean
+	rm -R pkg-node pkg-web
 
 ## test:
 .PHONY: test
