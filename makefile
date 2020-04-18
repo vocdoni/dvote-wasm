@@ -21,6 +21,7 @@ help: makefile
 init:
 	rustup target add wasm32-unknown-unknown
 	curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+	# cargo install wasm-bindgen-cli
 
 ## :
 
@@ -42,6 +43,10 @@ pkg-node/dvote_wasm_bg.wasm: $(SOURCES) Cargo.toml
 
 pkg-web/dvote_wasm_bg.wasm: $(SOURCES) Cargo.toml
 	wasm-pack build --out-dir pkg-web
+
+# bindgen:
+# 	wasm-bindgen target/wasm32-unknown-unknown/release/deps/dvote_wasm.wasm --nodejs  --out-dir ./bindgen-node
+# 	wasm-bindgen target/wasm32-unknown-unknown/release/deps/dvote_wasm.wasm --target web --out-dir ./bindgen-web
 
 ## :
 

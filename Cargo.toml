@@ -1,6 +1,6 @@
 [package]
 name = "dvote_wasm"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Jør∂¡ <itsbrickpop@gmail.com>"]
 edition = "2018"
 
@@ -8,9 +8,10 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2.59"
+wasm-bindgen = "0.2.60"
 hex = "0.4.2"
 base64 = "0.12.0"
+num-bigint = "0.2.6"
 poseidon-rs = { git = "https://github.com/arnaucube/poseidon-rs#4cba42e" }
 # za-prover = { git = "https://github.com/adria0/za#e3634a3" }
 
